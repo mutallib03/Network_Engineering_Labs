@@ -125,7 +125,6 @@ Gig0/1      on           802.1q         trunking      999
 ---
 
 ## 🎓 Learning Outcomes
-## 🎓 Learning Outcomes
 By completing this architecture, I gained hands-on experience with the following enterprise networking concepts:
 * **Switchport Configuration:** Created VLAN databases from the CLI and mapped physical interfaces to strict access ports to isolate departmental traffic.
 * **Native VLAN Hardening:** Configured 802.1Q trunk links across the distribution/access layer and actively resolved "Native VLAN Mismatch" errors by successfully migrating untagged traffic to a blackhole VLAN (999).
