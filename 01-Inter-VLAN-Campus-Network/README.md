@@ -73,18 +73,18 @@ The full raw text configuration scripts for the routing and switching infrastruc
 ---
 ## ✅ Verification Commands
 
-**1. Verifying IP Configuration**
-Shows the successful application of static IP addressing and default gateways on the endpoints.
+**1. Verifying IP Configuration (`show ip interfaces brief`).**
+Shows succesfully assigned ip addresses for subinterfaces.
 
 ![IP Configuration](verification/ip.png)
 
 **2. Verifying Inter-VLAN Routing (ICMP Ping Test)**
-Successful ping from the HR VLAN to the IT VLAN, proving Layer 3 sub-interface routing is operational across the trunk links.
+Successful ping from the PC0 from HR VLAN to IT and SALES VLANS.
 
 ![Ping Test](verification/ping.png)
 
 **3. Verifying VLAN Assignments (`show vlan brief`)**
-Confirms that all access ports are correctly hardcoded to their respective departmental broadcast domains.
+Confirms that all VLANS are created correctly.
 
 ![VLAN Database](verification/vlans.png)
 
