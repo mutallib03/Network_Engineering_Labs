@@ -73,29 +73,25 @@ The full raw text configuration scripts for the routing and switching infrastruc
 ---
 ## ✅ Verification Commands
 
-**1. Verifying Inter-VLAN Routing (ICMP Echo Request)**
-Successful ping from HR PC (`192.168.10.12`) to IT PC (`192.168.20.10`), proving Layer 3 sub-interface routing is operational.
-```text
-C:\>ping 192.168.20.10
+**1. Verifying IP Configuration**
+Shows the successful application of static IP addressing and default gateways on the endpoints.
 
-Pinging 192.168.20.10 with 32 bytes of data:
+![IP Configuration](verification/ip.png)
 
-Request timed out.
-Reply from 192.168.20.10: bytes=32 time<1ms TTL=127
-Reply from 192.168.20.10: bytes=32 time<1ms TTL=127
-Reply from 192.168.20.10: bytes=32 time<1ms TTL=127
-```
-*(Note: Initial timeout reflects expected ARP resolution latency).*
+**2. Verifying Inter-VLAN Routing (ICMP Ping Test)**
+Successful ping from the HR VLAN to the IT VLAN, proving Layer 3 sub-interface routing is operational across the trunk links.
 
-**2. Verifying Trunking & Native VLAN Security (`show interfaces trunk` in sw4)**
-Validates that 802.1Q encapsulation is active and the Native VLAN has been successfully migrated to 999.
-```text
-Port        Mode         Encapsulation  Status        Native vlan
-Fa0/1       on           802.1q         trunking      999
-Fa0/2       on           802.1q         trunking      999
-Fa0/3       on           802.1q         trunking      999
-Gig0/1      on           802.1q         trunking      999
-```
+![Ping Test](verification/ping.png)
+
+**3. Verifying VLAN Assignments (`show vlan brief`)**
+Confirms that all access ports are correctly hardcoded to their respective departmental broadcast domains.
+
+![VLAN Database](verification/vlans.png)
+
+**4. Verifying Trunking & Native VLAN Security (`show interfaces trunk`)**
+Validates that 802.1Q encapsulation is active on inter-switch links and the Native VLAN has been successfully migrated to VLAN 999.
+
+![Trunk Status](verification/trunk.png)
 
 ---
 
