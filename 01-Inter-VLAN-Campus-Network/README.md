@@ -110,8 +110,15 @@ Validates that 802.1Q encapsulation is active on inter-switch links and the Nati
 ├── configs/
 │   ├── r1.cfg
 │   └── sw4.cfg
-│   └── sw4.cfg
-│   └── sw4.cfg
+│   └── sw3.cfg
+│   └── sw2.cfg
+│   └── sw1.cfg
+│
+├──verification/
+│   ├── ip.png
+│   └── ping.png
+│   └── trunk.png
+│   └── vlans.png
 │
 ├── README.md
 ├── topology.png
