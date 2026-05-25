@@ -14,7 +14,7 @@ This repository serves as a documented timeline of my hands-on network engineeri
 
 ## 📂 Project Directory
 
-### [01. Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Security](./01-Inter-VLAN-Campus-Network)
+### [01. Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Switching](./01-Inter-VLAN-Campus-Network)
 * **Status:** Completed
 * **Focus:** Layer 2 segmentation and multi-switch campus architecture.
 * **Technologies:** VLANs, 802.1Q Trunking, Sub-interfaces, Native VLAN Security, Out-of-Band Management.
