@@ -1,4 +1,4 @@
-# 🏢 Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Security
+# 🏢 Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Swithcing
 
 A Cisco Packet Tracer lab demonstrating VLAN segmentation, secure trunking, and inter-VLAN routing for enterprise campus networks.
 
