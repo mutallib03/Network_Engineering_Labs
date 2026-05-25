@@ -1,4 +1,4 @@
-# 🏢 Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Swithcing
+# 🏢 Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Switching
 
 A Cisco Packet Tracer lab demonstrating VLAN segmentation, secure trunking, and inter-VLAN routing for enterprise campus networks.
 
@@ -74,17 +74,17 @@ The full raw text configuration scripts for the routing and switching infrastruc
 ## ✅ Verification Commands
 
 **1. Verifying IP Configuration (`show ip interfaces brief`).**
-Shows succesfully assigned ip addresses for subinterfaces.
+Shows successfully assigned ip addresses for subinterfaces.
 
 ![IP Configuration](verification/ip.png)
 
 **2. Verifying Inter-VLAN Routing (ICMP Ping Test)**
-Successful ping from the PC0 from HR VLAN to IT and SALES VLANS.
+Successful ping from the PC0 from HR VLAN to IT and SALES VLANs.
 
 ![Ping Test](verification/ping.png)
 
 **3. Verifying VLAN Assignments (`show vlan brief`)**
-Confirms that all VLANS are created correctly.
+Confirms that all VLANs are created correctly.
 
 ![VLAN Database](verification/vlans.png)
 
