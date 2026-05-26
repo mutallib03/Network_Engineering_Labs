@@ -11,7 +11,6 @@ This repository serves as a documented timeline of my hands-on network engineeri
 * **Tools:** Cisco IOS CLI, Cisco Packet Tracer.
 
 ---
-
 ## 📂 Project Directory
 
 ### [01. Enterprise Campus Network: Inter-VLAN Routing & Layer 2 Switching](./01-Inter-VLAN-Campus-Network)
@@ -19,10 +18,11 @@ This repository serves as a documented timeline of my hands-on network engineeri
 * **Focus:** Layer 2 segmentation and multi-switch campus architecture.
 * **Technologies:** VLANs, 802.1Q Trunking, Sub-interfaces, Native VLAN Security, Out-of-Band Management.
 
-### [02. High Availability: EtherChannel & STP (Upcoming)](#)
-* **Status:** In Progress
-* **Focus:** Switch redundancy and loop prevention.
-* **Technologies:** Spanning Tree Protocol (STP), Port-Channels, Link Aggregation.
+### [02. High Availability Campus Switching: EtherChannel & STP](./02-Campus-Switching-High-Availability)
+* **Status:** Completed
+* **Focus:** Redundant campus switching design, link aggregation, loop prevention, and failover testing.
+* **Technologies:** EtherChannel, LACP, Rapid PVST+, STP Root Bridge, 802.1Q Trunking, VLANs, Layer 3 Switch SVIs, Inter-VLAN Routing.
+* **Key Skills:** Port-channel configuration, STP root bridge control, trunk verification, SVI gateway configuration, link failure testing, and troubleshooting MAC/STP states.
 
 ---
-*Feel free to explore the project folders above to see full topology diagrams, configuration snippets, and verification testing.*
+*Feel free to explore the project folders above to see full topology diagrams, configuration files, verification screenshots, and failure testing results.*
