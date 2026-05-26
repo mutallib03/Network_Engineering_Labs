@@ -129,7 +129,7 @@ The main objectives of this lab are:
 
 ---
 
-## 🔗 EtherChannel Design
+##  EtherChannel Design
 
 All EtherChannels in this lab use **LACP**.
 
