@@ -385,6 +385,7 @@ A full Port-channel path was shut down to test Rapid PVST+ failover. STP recalcu
 After the STP failover test, end-to-end connectivity was tested again using ping. The ping remained successful through the alternate path.
 
 ![STP Failover Ping Success](verify/14-stp-failover-ping-success.png)
+
 ---
 
 ##  Troubleshooting Note
