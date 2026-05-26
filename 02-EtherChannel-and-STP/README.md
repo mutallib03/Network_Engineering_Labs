@@ -305,74 +305,66 @@ This verifies that SW1 is the root bridge for VLAN 20.
 
 ---
 
-### 8. Inter-VLAN Ping Test
+### 8. Ping Success
 
-This verifies that hosts in VLAN 10 and VLAN 20 can communicate through SW1 inter-VLAN routing.
+This verifies end-to-end connectivity between the VLAN hosts.
 
-![Inter-VLAN Ping Success](verify/08-inter-vlan-ping-success.png)
+![Ping Success](verify/08-ping-success.png)
 
 ---
 
 ## Failure Testing
 
+### EtherChannel Status Before Failure
+
+This shows the EtherChannel state before shutting down a physical member link.
+
+![EtherChannel Before Failure](verify/09-etherchannel-before-failure.png)
+
+---
+
 ### EtherChannel Member Link Failure
 
-To test EtherChannel redundancy, one physical member link inside an EtherChannel bundle was shut down.
+One physical interface inside an EtherChannel bundle was shut down to test link redundancy. The Port-channel stayed operational because another member link was still active.
 
-Example command:
-
-```bash
-conf t
-interface fa0/3
- shutdown
-end
-```
-
-After the shutdown, the Port-channel remained operational because another member link was still active.
-
-![EtherChannel After Member Failure](verify/09-etherchannel-after-member-failure.png)
+![EtherChannel After Member Failure](verify/10-etherchannel-after-member-failure.png)
 
 ---
 
-### Connectivity After Link Failure
+### Connectivity After EtherChannel Member Failure
 
-After shutting down one EtherChannel member link, end-to-end connectivity was tested again using ping.
+After shutting down one EtherChannel member link, end-to-end connectivity was tested again using ping. The ping remained successful.
 
-The ping was still successful, proving that EtherChannel provided link redundancy.
-
-![Link Failure Ping Success](verify/10-link-failure-ping-success.png)
+![Link Failure Ping Success](verify/11-link-failure-ping-success.png)
 
 ---
 
-### STP Failover Test
+### STP Status Before Failure
 
-To test STP failover, a full Port-channel path was shut down. Rapid PVST+ recalculated the topology and allowed traffic to continue through an alternate available path.
+This shows the STP state before shutting down a full Port-channel path.
 
-Example command:
+![STP Before Failure](verify/12-stp-before-failure.png)
 
-```bash
-conf t
-interface port-channel 4
- shutdown
-end
-```
+---
 
-After testing, the Port-channel was restored using:
+### STP Status After Port-Channel Failure
 
-```bash
-conf t
-interface port-channel 4
- no shutdown
-end
-```
+A full Port-channel path was shut down to test Rapid PVST+ failover. STP recalculated the topology and selected an alternate forwarding path.
 
-![STP Failover After Port-Channel Shutdown](verify/11-stp-failover-after-portchannel-shutdown.png)
+![STP After Port-Channel Failure](verify/13-stp-after-portchannel-failure.png)
 
+---
+
+### Connectivity After STP Failover
+
+After the STP failover test, end-to-end connectivity was tested again using ping. The ping remained successful through the alternate path.
+
+![STP Failover Ping Success](verify/14-stp-failover-ping-success.png)
 ---
 
 ## Troubleshooting Note
 
-During testing, VLAN 20 connectivity initially failed even though the VLANs, trunks, SVIs, and STP configuration appeared correct. After power-cycling the Packet Tracer switches, the MAC address table and STP state refreshed, and connectivity worked correctly.
+During testing, VLAN 20 connectivity initially failed. i checked the VLANs, trunks, SVIs, and STP configuration and all looked correct. After power-cycling the Packet Tracer switches, the MAC address table and STP state refreshed, and connectivity worked correctly. So sometimes we just need to turn on and off the device once.
 
 This was an important troubleshooting lesson because it showed that sometimes the configuration may be correct, but the device state or simulation state may need to refresh.
 
@@ -426,10 +418,13 @@ This was an important troubleshooting lesson because it showed that sometimes th
 │   ├── 05-vlan-access-ports.png
 │   ├── 06-stp-vlan10-root.png
 │   ├── 07-stp-vlan20-root.png
-│   ├── 08-inter-vlan-ping-success.png
-│   ├── 09-etherchannel-after-member-failure.png
-│   ├── 10-link-failure-ping-success.png
-│   └── 11-stp-failover-after-portchannel-shutdown.png
+│   ├── 08-ping-success.png
+│   ├── 09-etherchannel-before-failure.png
+│   ├── 10-etherchannel-after-member-failure.png
+│   ├── 11-link-failure-ping-success.png
+│   ├── 12-stp-before-failure.png
+│   ├── 13-stp-after-portchannel-failure.png
+│   └── 14-stp-failover-ping-success.png
 │
 ├── README.md
 ├── topology.png
