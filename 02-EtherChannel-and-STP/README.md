@@ -25,7 +25,7 @@ A Cisco Packet Tracer lab demonstrating redundant campus switching, EtherChannel
 
 ---
 
-## 🔷 Project Overview
+##  Project Overview
 
 This project demonstrates a high availability campus switching design using **EtherChannel**, **Rapid PVST+**, **VLANs**, **trunking**, and **Layer 3 switch inter-VLAN routing**.
 
@@ -35,7 +35,7 @@ This lab was built and tested in **Cisco Packet Tracer**.
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 The main objectives of this lab are:
 
@@ -68,7 +68,7 @@ The main objectives of this lab are:
 
 ---
 
-## 🌐 Network Topology
+##  Network Topology
 
 ![Network Topology](topology.png)
 
@@ -90,7 +90,7 @@ The main objectives of this lab are:
 
 ---
 
-## 🔌 Device Connection Table
+##  Device Connection Table
 
 | Connection | Link Type | Port-Channel | Purpose |
 |---|---|---|---|
@@ -107,7 +107,7 @@ The main objectives of this lab are:
 
 ---
 
-## 🌈 VLAN Design
+##  VLAN Design
 
 | VLAN | Name | Network | Default Gateway |
 |---|---|---|---|
@@ -116,7 +116,7 @@ The main objectives of this lab are:
 
 ---
 
-## 🧾 IP Addressing Table
+##  IP Addressing Table
 
 | Device | VLAN | IP Address | Subnet Mask | Default Gateway |
 |---|---|---|---|---|
@@ -146,7 +146,7 @@ EtherChannel allows multiple physical links to operate as one logical link. This
 
 ---
 
-## 🌳 STP Design
+##  STP Design
 
 Rapid PVST+ is used in this lab to prevent Layer 2 loops.
 
@@ -164,7 +164,7 @@ Important STP concept in this lab:
 
 ---
 
-## 💻 Device Configuration Files
+##  Device Configuration Files
 
 The full switch configurations are stored in the `configs/` folder.
 
@@ -178,7 +178,7 @@ The full switch configurations are stored in the `configs/` folder.
 
 ---
 
-## ⚙️ Key Configuration Examples
+##  Key Configuration Examples
 
 ### VLAN Configuration
 
@@ -255,7 +255,7 @@ interface vlan 20
 
 ---
 
-## ✅ Verification Commands
+##  Verification Commands
 
 The following commands were used to verify the lab:
 
@@ -338,7 +338,7 @@ This verifies end-to-end connectivity between the VLAN hosts.
 
 ---
 
-## ⚡ Failure Testing
+##  Failure Testing
 
 ### EtherChannel Status Before Failure
 
@@ -387,7 +387,7 @@ After the STP failover test, end-to-end connectivity was tested again using ping
 ![STP Failover Ping Success](verify/14-stp-failover-ping-success.png)
 ---
 
-## 🛠️ Troubleshooting Note
+##  Troubleshooting Note
 
 During testing, VLAN 20 connectivity initially failed. i checked the VLANs, trunks, SVIs, and STP configuration and all looked correct. After power-cycling the Packet Tracer switches, the MAC address table and STP state refreshed, and connectivity worked correctly. So sometimes we just need to turn on and off the device once.
 
@@ -395,7 +395,7 @@ This was an important troubleshooting lesson because it showed that sometimes th
 
 ---
 
-## 🚀 How to Run This Lab
+##  How to Run This Lab
 
 1. Download the Packet Tracer file from this repository.
 2. Open the `.pkt` file using Cisco Packet Tracer.
@@ -423,7 +423,7 @@ This was an important troubleshooting lesson because it showed that sometimes th
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```text
 02-Campus-Switching-High-Availability/
@@ -458,7 +458,7 @@ This was an important troubleshooting lesson because it showed that sometimes th
 
 ---
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 
 By completing this lab, I practiced and improved the following networking skills:
 
@@ -477,7 +477,7 @@ By completing this lab, I practiced and improved the following networking skills
 
 ---
 
-## 🧩 Conclusion
+##  Conclusion
 
 This lab shows how EtherChannel and STP work together to provide high availability in a switched campus network.
 
